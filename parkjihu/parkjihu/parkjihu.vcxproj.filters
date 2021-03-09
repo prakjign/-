@@ -15,9 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="parkjihu.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="9012 괄호.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
@@ -38,7 +35,11 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="input.txt" />
-    <Text Include="output.txt" />
+    <Text Include="input.txt">
+      <Filter>리소스 파일</Filter>
+    </Text>
+    <Text Include="output.txt">
+      <Filter>리소스 파일</Filter>
+    </Text>
   </ItemGroup>
 </Project>

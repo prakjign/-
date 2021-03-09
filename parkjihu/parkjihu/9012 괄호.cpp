@@ -3,44 +3,67 @@
 #include <stack>
 using namespace std; 
 
-저거를 함수화 화면 될듯 
+
+
+void input(void)
+{
+	stack<char> s;
+
+	int low = 0; 
+	char text[51] = { 0, }; 
+
+	cin >> text; 
+	
+	for (int k = 0; text[k] != 0; k++)
+	{
+		if (text[k] == '(')
+		{
+			//cout << 1 << endl; 
+			s.push(1);
+		}
+			
+		else {
+			if (s.size() == 0) {
+				s.push(1);
+				break;
+			}
+			else {
+				//cout << "pop" << endl; 
+				s.pop();
+			}
+				
+		}
+			
+
+				
+
+	}
+	//cout << "S size" << s.size();
+	//cout << endl << endl;
+
+	if (s.size() == 0)
+		cout << "YES" << endl;
+	else
+		cout << "NO" << endl;
+
+}
 
 int main(void)
 {
-	stack<char> stack; 
 	int number;
-	char text[51] = { 0, };
 
 	freopen("input.txt", "r", stdin); 
-	freopen("output.txt", "w", stdout);
+	//freopen("output.txt", "w", stdout);
 
 
 	cin >> number; 
 
 	for (int i = 1; i <= number; i++)
 	{
-		cin >> text;  // 괄호 받고 
+		input();  // 괄호 받고 
 		
 		
-		for (int k = 0; text[k] == '(' || text[k] == ')'; k++)
-		{
-			if (text[k] == '(')
-				stack.push(1);
-			else
-				if (stack.size() == 0) {
-					stack.push(1);
-					break;
-				}
-				else
-					stack.pop(); 
-				
-		}
-
-		if (stack.size() == 0)
-			cout << "YES" << endl;
-		else
-			cout << "NO" << endl;
-
+		
 
 	}
 
